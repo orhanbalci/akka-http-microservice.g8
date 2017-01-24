@@ -1,4 +1,4 @@
-package $package_name$
+package $package$
 
 import akka.actor.ActorSystem
 import akka.stream.ActorMaterializer
