@@ -1,8 +1,8 @@
 name := "$project_name$"
 
-version := $project_version$
+version := "$project_version$"
 
-scalaVersion := $scala_version$
+scalaVersion := "$scala_version$"
 
 resolvers += "akka" at "http://repo.akka.io/snapshots"
 
