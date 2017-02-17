@@ -1,4 +1,4 @@
-name := "$project_name$"
+name := "$name$"
 
 version := "$project_version$"
 
