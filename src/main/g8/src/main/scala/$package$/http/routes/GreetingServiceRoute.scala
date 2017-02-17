@@ -1,7 +1,7 @@
 package $package$.http.routes
 
 import akka.http.scaladsl.server.Directives._
-import net.orhanbalci.models.GreetingEntity
+import $package$.models.GreetingEntity
 import de.heikoseeberger.akkahttpcirce.CirceSupport
 import io.circe.generic.auto._
 import io.circe.syntax._

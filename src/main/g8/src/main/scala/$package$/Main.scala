@@ -1,5 +1,5 @@
 package $package$
-import net.orhanbalci.http.HttpService
+import $package$.http.HttpService
 import akka.actor.ActorSystem
 import akka.stream.ActorMaterializer
 import akka.http.scaladsl.Http
