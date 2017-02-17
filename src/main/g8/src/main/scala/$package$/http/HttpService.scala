@@ -1,6 +1,6 @@
 package $package$.http
 
-import net.orhanbalci.http.routes._
+import $package$.http.routes._
 import akka.http.scaladsl.server.Directives._
 import scala.concurrent.ExecutionContext
 class HttpService(implicit executionContext: ExecutionContext) {
