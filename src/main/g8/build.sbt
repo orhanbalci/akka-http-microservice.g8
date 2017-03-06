@@ -13,6 +13,7 @@ libraryDependencies ++= Seq(
     "de.heikoseeberger" %% "akka-http-circe" % "1.11.0", 
     "io.circe" %% "circe-core" % "0.6.1",
     "io.circe" %% "circe-generic" % "0.6.1",
-    "io.circe" %% "circe-parser" % "0.6.1"
+    "io.circe" %% "circe-parser" % "0.6.1",
+    "com.typesafe.slick" %% "slick" % "3.0.0"
 )
 
