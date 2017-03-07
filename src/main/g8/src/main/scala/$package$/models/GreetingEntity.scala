@@ -1,5 +1,5 @@
 package $package$.models
-import slick.jdbc.H2Profile.api._ 
+import slick.driver.H2Driver.api._ 
 
 case class GreetingEntity(id: Int, greeting: String)
 
