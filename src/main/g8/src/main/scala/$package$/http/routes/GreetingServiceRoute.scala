@@ -9,7 +9,7 @@ import scala.concurrent.ExecutionContext
 class GreetingServiceRoute(implicit executionContext: ExecutionContext) extends CirceSupport {
   val route = pathPrefix("greeting") {
     get {
-      complete(GreetingEntity("Hello Akka Http").asJson)
+      complete(GreetingEntity(1,"Hello Akka Http").asJson)
     }
   }
 }

@@ -14,6 +14,6 @@ libraryDependencies ++= Seq(
     "io.circe" %% "circe-core" % "0.6.1",
     "io.circe" %% "circe-generic" % "0.6.1",
     "io.circe" %% "circe-parser" % "0.6.1",
-    "com.typesafe.slick" %% "slick" % "3.0.0"
+    "com.typesafe.slick" %% "slick" % "3.22.0"
 )
 
