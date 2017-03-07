@@ -1,5 +1,5 @@
 import slick.jdbc.H2Profile.api._
-import scala.concurrent.executioncontext.Implicits.global
+import scala.concurrent.ExecutionContext.Implicits.global
 
 object DbService {
 
