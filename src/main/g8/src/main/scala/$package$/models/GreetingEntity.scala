@@ -6,5 +6,5 @@ case class GreetingEntity(id: Int, greeting: String)
 class Greetings(tag : Tag) extends Table[(Int, String)](tag, "GREETINGS"){
   def id = column[Int]("id",O.PrimaryKey)
   def greeting = column[String]("greeting")
-  def * = (id, greeting) <> (GreetingEntity, GreetingEntity.unapply _)
+  def * = (id, greeting) <> (GreetingEntity.tuppled, GreetingEntity.unapply)
 }
