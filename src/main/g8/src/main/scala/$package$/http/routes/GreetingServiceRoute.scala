@@ -6,10 +6,15 @@ import de.heikoseeberger.akkahttpcirce.CirceSupport
 import io.circe.generic.auto._
 import io.circe.syntax._
 import scala.concurrent.ExecutionContext
-class GreetingServiceRoute(implicit executionContext: ExecutionContext) extends CirceSupport {
+class GreetingServiceRoute(service : GreetingService)(implicit executionContext: ExecutionContext) extends CirceSupport {
   val route = pathPrefix("greeting") {
     get {
-      complete(GreetingEntity(1,"Hello Akka Http").asJson)
+     	complete(service.get().asJson)
+    }~
+    post{
+    	entity(as[GreetingEntity]){
+    		greeting => complete(service.put(greeting))
+   		}
     }
   }
 }

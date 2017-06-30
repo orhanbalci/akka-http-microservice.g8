@@ -1,10 +1,5 @@
 package $package$.models
 import slick.driver.H2Driver.api._ 
 
-case class GreetingEntity(id: Int, greeting: String)
+case class GreetingEntity(greeting: String, id: Int = 0)
 
-class Greetings(tag : Tag) extends Table[GreetingEntity](tag, "GREETINGS"){
-  def id = column[Int]("id",O.PrimaryKey)
-  def greeting = column[String]("greeting")
-  def * = (id, greeting) <> (GreetingEntity.tupled, GreetingEntity.unapply)
-}
