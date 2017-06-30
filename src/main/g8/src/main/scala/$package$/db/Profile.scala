@@ -12,7 +12,7 @@ trait Profile {
 	import profile.api._
 
 	lazy val db = Database.forConfig("test01")
-	def exec[T](action : DBIO[T]) = {
+	def exec[T](action : DBIOAction[T, NoStream, Effect.All]) = {
 		Await.result(db.run(action), 2.seconds)
 	}
 }
