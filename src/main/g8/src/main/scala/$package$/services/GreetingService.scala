@@ -4,7 +4,7 @@ import $package$.db.DatabaseModule
 import $package$.models.GreetingEntity
 
 class GreetingService(db : DatabaseModule){
-	def get(id : Long) = db.selectGreeting(id)
+	def get(id : Long) : GreetingEntity = {return db.selectGreeting(id);}
 	def put(greeting : GreetingEntity) = db.insertGreeting(greeting)
-	def get() = {return db.selectGreeting();}
+	def get() : Seq[GreetingEntity] = {return db.selectGreeting();}
 }
