@@ -7,7 +7,7 @@ trait GreetingModule {
 	import profile.api._
 
 	class GreetingTable(tag : Tag) extends Table[GreetingEntity](tag, "GREETINGS"){
-	  def id = column[Int]("id",O.PrimaryKey)
+	  def id = column[Long]("id",O.PrimaryKey)
 	  def greeting = column[String]("greeting")
 	  def * = (greeting, id) <> (GreetingEntity.tupled, GreetingEntity.unapply)
 	}
