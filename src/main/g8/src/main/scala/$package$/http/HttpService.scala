@@ -4,7 +4,8 @@ import $package$.http.routes._
 import akka.http.scaladsl.server.Directives._
 import scala.concurrent.ExecutionContext
 class HttpService(implicit executionContext: ExecutionContext) {
-  val greetingRoute = new GreetingServiceRoute
+  val dbModule = new DatabaseModule(slick.jdbc.H2Profile);
+  val greetingRoute = new GreetingServiceRoute(new GreetingService(dbModule))
   val route = pathPrefix("alpha") {
     greetingRoute.route ~ pathSingleSlash {
       get {
