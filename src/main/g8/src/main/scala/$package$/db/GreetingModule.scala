@@ -15,9 +15,9 @@ trait GreetingModule {
 	val greetings = TableQuery[GreetingTable]
 
 	def createGreetingSchema = exec(greetings.schema.create)
-	def insertGreeting(greeting : Greeting)  = exec(greetings += greeting)
-	def insertGreetings(greeting : Seq[Greeting]) = exec(this.greetings ++= greeting)
-	def selectGreeting(id : Long) = exec(messages.filter(_.id === id).result)
-	def selectGreeting() = exec(messages.result)
+	def insertGreeting(greeting : GreetingEntity)  = exec(greetings += greeting)
+	def insertGreetings(greeting : Seq[GreetingEntity]) = exec(this.greetings ++= greeting)
+	def selectGreeting(id : Long) = exec(greetings.filter(_.id === id).result)
+	def selectGreeting() = exec(greetings.result)
 
 }
