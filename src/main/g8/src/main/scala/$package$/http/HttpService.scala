@@ -19,4 +19,5 @@ class HttpService(implicit executionContext: ExecutionContext) {
     }
   }
 
+  dbModule.createGreetingSchema()
 }
