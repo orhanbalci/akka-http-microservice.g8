@@ -1,4 +1,4 @@
-package $package.db
+package $package$.db
 
 import slick.jdbc.JdbcProfile
 

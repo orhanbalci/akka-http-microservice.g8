@@ -1,4 +1,4 @@
-import $package.db.DatabaseModule
+import $package$.db.DatabaseModule
 
 object GreetingService(db : DatabaseModule){
 	def get(id : Long) = db.selectGreeting(id)
