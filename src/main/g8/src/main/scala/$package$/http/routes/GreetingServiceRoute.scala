@@ -1,5 +1,6 @@
 package $package$.http.routes
 
+import $package$.services.GreetingService
 import akka.http.scaladsl.server.Directives._
 import $package$.models.GreetingEntity
 import de.heikoseeberger.akkahttpcirce.CirceSupport

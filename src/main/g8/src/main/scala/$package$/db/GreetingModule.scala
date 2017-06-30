@@ -2,14 +2,14 @@ package $package$.db
 
 import $package$.models.GreetingEntity
 
-trait MessageDatabaseModule {
+trait GreetingModule {
 	self : Profile => 
 	import profile.api._
 
 	class GreetingTable(tag : Tag) extends Table[GreetingEntity](tag, "GREETINGS"){
 	  def id = column[Int]("id",O.PrimaryKey)
 	  def greeting = column[String]("greeting")
-	  def * = (id, greeting) <> (GreetingEntity.tupled, GreetingEntity.unapply)
+	  def * = (greeting, id) <> (GreetingEntity.tupled, GreetingEntity.unapply)
 	}
 
 	val greetings = TableQuery[GreetingTable]
