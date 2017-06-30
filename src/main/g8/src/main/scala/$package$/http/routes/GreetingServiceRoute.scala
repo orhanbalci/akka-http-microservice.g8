@@ -10,7 +10,7 @@ import scala.concurrent.ExecutionContext
 class GreetingServiceRoute(service : GreetingService)(implicit executionContext: ExecutionContext) extends CirceSupport {
   val route = pathPrefix("greeting") {
     get {
-     	complete(service.get().asJson)
+       	complete(service.get().asJson)
     }~
     post{
     	entity(as[GreetingEntity]){
